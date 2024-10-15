@@ -1,0 +1,144 @@
+/* ejemplo1.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Verdana', sans-serif;
+    color: #fff; /* Texto blanco por defecto */
+    background: #f0f8ff; 
+}
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 86, 179, 0.7); /* Azul semi-transparente */
+}
+
+nav {
+    max-width: 900px;
+    margin: auto;
+    background-color: #333;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.menu-horizontal {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-horizontal > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-horizontal > li:hover {
+    background-color: gold;
+}
+
+.menu-vertical {
+    position: absolute; /* Asegúrate de que esté en posición absoluta */
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10; /* Asegúrate de que tenga un z-index alto */
+}
+
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
+}
+
+.menu-vertical li:hover {
+    background-color: black;
+}
+
+.menu-vertical li a {
+    display: block;
+    color: white;
+    padding: 15px 15px 15px 20px;
+    text-decoration: none;
+}
+
+
+
+
+
+
+.carousel {
+    position: relative;
+    margin: 20px auto;
+    max-width: 800px;
+    overflow: hidden; /* Oculta imágenes que exceden el contenedor */
+}
+
+.carousel img {
+    width: 100%;
+    height: 400px; /* Ajusta la altura de todas las imágenes */
+    object-fit: cover; /* Mantiene la proporción de aspecto */
+    border-radius: 10px; /* Bordes redondeados */
+    display: none; /* Oculta todas las imágenes por defecto */
+}
+
+.carousel img.active {
+    display: block; /* Muestra la imagen activa */
+}
+
+.arrow {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+section {
+    min-height: 100vh;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0, 86, 179, 0.7);
+}
+
+.info-text {
+    color: black; /* Texto negro para la información */
+}
+
+.section-title {
+    color: #0056b3; /* Títulos en azul */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    nav .menu li {
+        display: block; /* Elementos en bloque en pantallas pequeñas */
+        margin: 10px 0; /* Espaciado vertical */
+    }
+
+    .arrow {
+        font-size: 1.5em; /* Tamaño de flechas más pequeño */
+    }
+}
+

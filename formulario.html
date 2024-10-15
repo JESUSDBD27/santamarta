@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto - Santa Marta</title>
+    <link rel="stylesheet" href="formu.css"> <!-- Cambiado a formu.css -->
+</head>
+<body>
+    <div class="container">
+        <h1>Contáctanos</h1>
+        <form action="CONEXION.php" method="POST">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="resena">Comentarios:</label>
+                <textarea id="resena" name="resena" rows="4" required></textarea>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+/* comidas.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Fondo blanco azul claro */
+    color: #000; /* Texto negro */
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #1e90ff; /* Azul */
+    color: white; /* Texto blanco */
+}
+
+section {
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px;
+}
+
+.dishes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.dish {
+    background: #e0f7fa; /* Fondo azul claro */
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(170, 140, 140, 0.2);
+}
+
+.dish img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1e90ff; /* Azul */
+    color: white; /* Texto blanco */
+}

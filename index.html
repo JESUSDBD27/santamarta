@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Marta - Destino Turístico</title>
+    <link rel="stylesheet" type="text/css" href="ejemplo1.css">
+</head>
+<body>
+    <header>
+       
+        <h1>Santa Marta</h1>
+        <h2>Descubre el Paraíso Caribeño</h2>
+       
+    </header>
+
+    <nav> 
+        <ul class="menu-horizontal">
+            <li><a href="INDEX.html">Inicio</a></li>
+
+            <li>
+
+                <a href="#">Turismo</a>
+            <ul class="menu-vertical">
+            <li><a href="sitios.html">Sitios Turísticos</a></li>
+            <li><a href="comidas.html">Comidas Típicas</a></li>
+            </ul>
+        </li>
+            <li>
+                <a href="index3.html">Historia</a></li>
+                <li>
+                    <a href="http://localhost/NUEVA PAGINA/formulario.html">Contáctanos</a></li>
+        </ul>
+
+    </nav>
+    
+
+    <div class="carousel">
+        <img src="../NUEVA PAGINA/IMG/PRINCIPAL.jpg" alt="Imagen principal de Santa Marta" class="active">
+        <img src="../NUEVA PAGINA/IMG/sierra.jpeg" alt="Sierra Nevada de Santa Marta">
+        <img src="../NUEVA PAGINA/IMG/imagen.jpg" alt="Playa de Santa Marta">
+        <img src="../NUEVA PAGINA/IMG/parque.jpg" alt="Parque Tayrona">
+        <img src="../NUEVA PAGINA/IMG/TURISMO1.jpg" alt="Delfines en el Caribe">
+        
+        <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+        <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <section>
+        <h3 class="section-title">Información sobre Santa Marta</h3>
+        <p class="info-text">Santa Marta es una hermosa ciudad ubicada en el mar Caribe, en el departamento de Magdalena, en el norte de Colombia. Fundada en 1525, es una de las ciudades más antiguas de América y un destino turístico clave por su rica historia, cultura y belleza natural.</p>
+        <p class="info-text">La ciudad está rodeada de montañas y playas espectaculares, que la convierten en un lugar ideal para el ecoturismo y el disfrute del sol.</p>
+
+        <h3 class="section-title">Cultura y Tradiciones</h3>
+        <ul class="info-text">
+            <li>Santa Marta es un crisol de culturas, donde se mezclan las tradiciones indígenas, africanas y españolas.</li>
+            <li>Se celebran fiestas como la Fiesta del Mar y el Festival de la Cumbia, que atraen a visitantes de todas partes.</li>
+            <li>La música, la danza y la gastronomía son elementos clave de la identidad cultural de la región.</li>
+        </ul>
+
+        <h3 class="section-title">Geografía</h3>
+        <p class="info-text">Santa Marta se encuentra en la costa caribeña de Colombia, cerca de la Sierra Nevada, donde se puede encontrar el pico más alto del país. Esta ubicación ofrece un clima tropical y una gran biodiversidad.</p>
+
+        <h3 class="section-title">Gastronomía</h3>
+        <p class="info-text">Uno de los platos más deliciosos que no puedes dejar de probar es el <strong>Cayeye</strong>, un puré de plátano verde con queso. Otras delicias incluyen las arepas de huevo y el sancocho, una sopa tradicional con carne y plátano.</p>
+
+        <h3 class="section-title">Actividades</h3>
+        <p class="info-text">Santa Marta ofrece una amplia gama de actividades, desde deportes acuáticos hasta excursiones en la Sierra Nevada. No te pierdas la oportunidad de explorar el Parque Tayrona, un paraíso natural que combina montañas, selva y playas.</p>
+
+        <h3 class="section-title">Videos Destacados</h3>
+        <video controls>
+            <source src="../NUEVA PAGINA/videos/Santa Marta Colombia 4K Overview  - Traveling Colombia.mp4" type="video/mp4">
+            
+        </video>
+
+        <video controls>
+            <source src="../NUEVA PAGINA/videos/sierranevada.mp4" type="video/mp4">
+          
+        </video>
+
+            
+        
+    </section>
+
+    <footer>
+        <h1>Página de Jesús Bohorquez y Diego Bolaño</h1>
+        <h2>Contacta con nosotros: <a href="mailto:DIEGOELCV@ymail.com">DIEGOELCV@ymail.com</a></h2>
+    </footer>
+
+    <script>
+        const slides = document.querySelectorAll('.carousel img');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
+

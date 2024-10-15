@@ -1,0 +1,65 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9f5ff; /* Color de fondo suave */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: #ffffff; /* Fondo blanco para el formulario */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #007bff; /* Color azul */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555; /* Color de texto */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #007bff; /* Borde azul */
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+input:focus,
+textarea:focus {
+    border-color: #0056b3; /* Color de borde al enfocar */
+    outline: none; /* Eliminar el borde de enfoque por defecto */
+}
+
+button {
+    background-color: #007bff; /* Fondo azul */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s; /* Transición suave para el botón */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color azul más oscuro al pasar el mouse */
+}
